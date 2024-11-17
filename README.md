@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# Projeto Bytebank - Disciplina de Testes
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto foi desenvolvido como parte da disciplina de **Testes de Software**. Ele representa um **Mínimo Produto Viável (MVP)** de uma aplicação bancária digital da empresa fictícia **Bytebank**. O objetivo deste repositório é demonstrar a importância de testes no desenvolvimento de software e aplicar boas práticas de teste no desenvolvimento front-end, utilizando uma aplicação simples.
 
-## Available Scripts
+O projeto ainda está em desenvolvimento e possui algumas funcionalidades já implementadas, mas também apresenta erros e áreas que precisam de correção, especialmente relacionadas ao cálculo do saldo nas transações.
 
-In the project directory, you can run:
+## Estrutura do Projeto
+
+A aplicação simula uma interface de banco digital onde o usuário pode realizar transações financeiras, como depósitos e transferências, visualizar seu saldo e consultar um extrato das transações realizadas.
+
+### Tela de Login (já implementada)
+
+- **Barra superior** com o logotipo do Bytebank à esquerda e o nome do usuário logado à direita (exemplo: Joana Fonseca Gomes).
+- **Corpo da página** com fundo verde claro.
+  
+### Menu Lateral Esquerdo
+
+- Links para diferentes áreas da aplicação:
+  - Inicial
+  - Transferências
+  - Investimentos
+  - Outros serviços
+
+### Seção de Extrato
+
+- Lateral direita da página, onde as transações realizadas são listadas (por enquanto, sem transações cadastradas, mas já funcional para visualização).
+  
+### Componentes Principais
+
+- **Saldo**: No topo da página, com o saldo atual do usuário (inicialmente R$1000,00).
+- **Transações**: Campo para realizar uma transação (depósito ou transferência), onde o usuário pode:
+  - Selecionar o tipo de transação
+  - Inserir o valor
+  - Realizar a transação, que será registrada no extrato.
+
+### Bug Conhecido
+
+- O saldo está apresentando um erro ao realizar transações:
+  - **Depósito**: Deveria adicionar o valor ao saldo, mas está subtraindo.
+  - **Transferência**: Deveria subtrair o valor do saldo, mas está somando.
+
+Este erro é um exemplo clássico de como a falta de testes pode levar a problemas difíceis de identificar e corrigir. A implementação de testes, que será feita nas próximas etapas do projeto, ajudará a prevenir esses tipos de erros e garantir que a aplicação funcione corretamente.
+
+---
+
+## Começando
+
+Este projeto é um exercício prático para aprender sobre testes no desenvolvimento de aplicações front-end. Siga os passos abaixo para rodar a aplicação em seu ambiente local.
+
+### Pré-requisitos
+
+- **Node.js** v16 ou superior
+- **npm** ou **yarn**
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Executa o aplicativo no modo de desenvolvimento.\
+Abra [http://localhost:3000](http://localhost:3000) para visualizá-lo no seu navegador.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+A página será recarregada quando você fizer alterações.\
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
